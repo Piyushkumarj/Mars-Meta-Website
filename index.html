@@ -1,364 +1,1135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>MarsMeta Tech | Innovating the Future, Today</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="MarsMeta Tech offers innovative technology solutions tailored to your business needs. Experience the future of tech with us today!">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.marsmetatech.com/">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="MarsMeta Tech">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://www.marsmetatech.com/assets/img/logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#714B67">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>MarsMeta Tech - Innovating the Future, Today</title>
+    <style>
 
-      <style>  
-      *{
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight:500px;
-  font-style: normal;
-      }
-  .hi {
-    font-family: "Roboto Condensed", serif;
-    font-optical-sizing: auto;
-    font-weight:80px;
-    font-style: normal;
-  }
- 
-        .flag-text {
-            font-size: 36px;
+       
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            overscroll-behavior: contain;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 4rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        } */
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Caveat', cursive;
+            padding-top: 80px;
+            
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* New fixed positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+        .logo {
+            color: #875A7B;
+            font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(to right, 
-                #FF9933 0%, #FF9933 33%, 
-                #FFFFFF 33%, #FFFFFF 66%, 
-                #138808 66%, #138808 100%);
-            -webkit-background-clip: text;
-            color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4c4c4c;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: #875A7B;
+            color: white;
+        }
+
+        .btn-secondary {
+            color: #4c4c4c;
+        }
+
+        .hero {
+            /* padding: 4rem; */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-card {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 400px;
+           
+        }
+
+        .quote-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            
+          
+        }
+
+        .quote-text {
+            font-style: italic;
+            color: #4c4c4c;
+            
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .heading-main {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #2b2b2b;
+        }
+
+        .heading-accent {
+            color: #FF9955;
+            text-decoration: underline;
+            text-decoration-color: #00FF99;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 8px;
+        }
+
+        .dashboard-preview {
+            margin-top: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #28a745;
+            width: 60%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #714B67;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #444;
+            padding: 0.5rem;
+            touch-action: manipulation;
+        }
+
+        .try-free-btn {
+            background-color: #714B67;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            touch-action: manipulation;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .hero {
+            text-align: center;
+            /* padding: 4rem 1rem; */
+            background-color: #f8f9fa;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 10rem);
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            padding: 0 1rem;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.4rem, 3vw, 3rem);
+            margin-bottom: 2rem;
+            color: #444;
+            padding: 0 1rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .price-tag {
+            color: #714B67;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-style: italic;
+            padding: 0.5rem;
+        }
+
+        .business-show {
+            background-color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 2rem 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            touch-action: manipulation;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+            pointer-events: none;
+        }
+
+        .app-name {
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .footer-text {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #f8f9fa;
+        }
+
+        .footer-text h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+        }
+
+        .footer-text p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 2000;
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                padding: 0 2rem;
+            }
+
+            .hero-buttons button {
+                width: 100%;
+            }
+
+            .business-show {
+                font-size: 0.9rem;
+                padding: 0.8rem;
+                margin: 1rem;
+                text-align: center;
+            }
+
+            .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+                padding: 1rem;
+                background-image: url(b1.png);
+            }
+
+            .app-card {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (hover: hover) {
+            .app-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .nav-links a:hover {
+                color: #714B67;
+            }
+        }
+
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        /* .x_wd_yellow_highlight_bold_05 {
+    background-image: url(1.png);
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    white-space: nowrap;
+    
+} */
+
+
+       
+
+        /* Fix for mobile Safari */
+        html {
+            height: -webkit-fill-available;
+        }
+
+        .container {
+            text-align: center;
+            padding: 1.5rem;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            
+        }
+
+        .title {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 1rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards;
+            line-height: 1.2;
+            padding: 0 10px;
+        }
+
+        .growth-text {
+            color: #20B2AA;
+            font-weight: bold;
             display: inline-block;
         }
-  
-  </style>
+
+        .sparkles {
+            position: absolute;
+            color: #FFD700;
+            font-size: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .btn {
+            background: #614051;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: clamp(1rem, 4vw, 1.1rem);
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 2rem 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.4s forwards;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            width: min(90%, 300px);
+        }
+
+        /* Active state for touch devices */
+        .btn:active {
+            transform: scale(0.98);
+            background: #523043;
+        }
+
+        .info {
+            color: #666;
+            font-size: clamp(0.8rem, 3vw, 0.9rem);
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.6s forwards;
+            padding: 0 10px;
+        }
+
+        .arrow {
+            color: #20B2AA;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Optimized animations for mobile */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.5); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1); 
+            }
+        }
+
+        /* Media queries for better mobile support */
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .title {
+                margin-bottom: 0.5rem;
+            }
+
+            .btn {
+                margin: 1.5rem 0;
+                padding: 0.875rem 1.5rem;
+            }
+        }
+
+        /* Prevent text selection on mobile */
+        .no-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        } 
+
+
+.footer {
+            background-color: #232e3c;
+            color: #ffffff;
+            padding: 50px 0 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer h3 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #8b95a5;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-description {
+            grid-column: 1 / -1;
+            color: #8b95a5;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #8b95a5;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #364049;
+            color: #8b95a5;
+            font-size: 14px;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #8b95a5;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .language-selector:hover {
+            background-color: #364049;
+        }
+        .sss{
+            padding-bottom: 200px;
+        }
+        .ssss{
+            padding: 50px;
+        }
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            background-color: #f8f9fa; /* Optional background */
+        }
+       /* Chat Icon */
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures icon is above other elements */
+}
+
+/* Chat Window - Fixed on Screen */
+#chat-window {
+    position: fixed;
+    bottom: 80px;  /* Adjust height above the chat icon */
+    right: 20px;
+    width: 320px;
+    max-height: 900px; /* Prevents the chatbox from becoming too large */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1001; /* Ensures chat window is above all other content */
+    display: none; /* Initially hidden */
+    overflow-y: auto;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Chat Messages Container */
+#chat-messages {
+    max-height: 450px;
+    overflow-y: auto; /* Enables scrolling inside chat messages */
+    padding: 10px;
+}
+
+/* Chat Input */
+input {
+    width: 75%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Send Button */
+
+
+    
+        /* button {
+            width: 18%;
+            padding: 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        } */
+
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
 </head>
 <body>
-
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="about.html">
-    <img src="assets/img/logo.png" alt="Global">
-    <p>MarsMeta Tech</p>
-  </a>
-  <p class="device-notification--message">MarsMeta Tech has so much to offer that we must request you orient your device to portrait or find a larger screen. Till then let me take you through the Services we provide.</p>
-</div>
-
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="index.html">
-            <img src="assets/img/logo.png" alt="Global">
-            <p class="flag-text">MarsMeta Tech</p>
-          </a>
-          <button class="header--cta cta">Contact Us</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
-        </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Services</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Contact us</span></li>
-          </ul>
-        </nav>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="intro">
-              <div class="intro--banner">
-                <h1 class="hi">The Complete<br>IT services<br> Company</h1>
-                <button class="cta">Contact Us
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                  <span class="btn-background"></span>
-                </button>
-                <!-- <img src="assets/img/introduction-visual.png" alt="Welcome"> -->
-                <img src="assets/img/introduction-visual.png" alt="Welcome" style="
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto;
-    object-fit: contain;
+   
     
-    /* Mobile-specific adjustments */
-    @media screen and (max-width: 767px) {
-        max-width: 300px; 
-        width: 90%;
-    }
-">
-              </div>
-              <div class="intro--options">
-                <a href="#0">
-                  <h3>2 yrs</h3>
-                  <p>Successfully completing 2 years and more to come!</p>
-                </a>
-                <a href="#0">
-                  <h3>20 projects</h3>
-                  <p>Working in varied domains helping our clients to achieve their goals ! Trusted by more than 10+ Companies.</p>
-                </a>
-                <a href="#0">
-                  <h3>Our Philosophy</h3>
-                  <p>We belive in doing work which impact people's live and help them grow!</p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>We can help you with</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="webDevelopment.html">
-                      <div class="slider--item-image">
-                        <img src="WebsiteDevelopment.html/first2.avif" alt="Victory">
-                      </div>
-                      <p class="slider--item-title">Website Development</p>
-                      <p class="slider--item-description">Building seamless, innovative websites that connect ideas with digital success.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="digitalMarketing.html">
-                      <div class="slider--item-image">
-                        <img src="DigitalMarketing/digitalmarketing.jpeg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Digital Marketing</p>
-                      <p class="slider--item-description">Connecting brands to the world, one click at a time.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="cataloging.html">
-                      <div class="slider--item-image">
-                        <img src="Cataloging/catalog.jpeg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Catalogue Designing</p>
-                      <p class="slider--item-description">Crafting unique, captivating catalogs that inspire and drive sales.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="Digital_visiting_card.html">
-                      <div class="slider--item-image">
-                        <img src="DigitalVisitingCard/digital_visitingCard.png" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Digital Visiting Card</p>
-                      <p class="slider--item-description">Smart, sleek, and always at your fingertips.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="applicationDevelopment.html">
-                      <div class="slider--item-image">
-                        <img src="Application development/application.jpeg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">App Development</p>
-                      <p class="slider--item-description">Transforming ideas into seamless, powerful digital experiences.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="e-commerce.html">
-                      <div class="slider--item-image">
-                        <img src="E-commerce listing/ecommer.avif" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Ecommerce Listing</p>
-                      <p class="slider--item-description">Showcasing products, driving sales – your e-commerce success starts here!</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="ERPsoftwares.html">
-                      <div class="slider--item-image">
-                        <img src="ERP softwares/first.avif" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">CRM &amp; ERP</p>
-                      <p class="slider--item-description">Streamlining operations, enhancing relationships, driving growth.</p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
-                </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="about">
-              <div class="about--banner">
-                <h2>We<br>are just few<br>passionate<br>people</h2>
-                <a href="./about.html">Know more
-                  <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>
-                  </span>
-                </a>
-                <!-- <img src="assets/img/about-visual.png" alt="About Us"> -->
-              </div>
-              <div class="about--options">
-                <a href="#0">
-                  <h3>Winners</h3>
-                </a>
-                <a href="#0">
-                  <h3>Philosophy</h3>
-                </a>
-                <a href="#0">
-                  <h3>History</h3>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <div class="modal--information">
-                    <p>2nd Floor, A, 6, Amaltash Marg, Block B, Sector 4, Noida, Uttar Pradesh 201301</p>
-                    <a href="info@marsmetatech.com">info@marsmetatech.com</a>
-                    <a href="tel:+918188890434">+91 8188890434</a>
-                  </div>
-                  <ul class="modal--options">
-                    <li><a href="https://www.instagram.com/marsmeta_tech/?hl=en">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/marsmeta-tech-967433336/">Linkedin</a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61569941048792">Facebook</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="hire">
-              <h2>You want us to do</h2>
-              <!-- checkout formspree.io for easy form setup -->
-              <form class="work-request">
-                <div class="work-request--options">
-                  <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
-                    <label for="opt-1">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Website Development
-                    </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
-                    <label for="opt-2">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      App Development
-                    </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
-                    <label for="opt-3">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Digital Marketing
-                    </label>
-                  </span>
-                  <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
-                    <label for="opt-4">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Catalogue Designing
-                    </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
-                    <label for="opt-5">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Digital Visiting Card
-                    </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
-                    <label for="opt-6">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      E-Commerce Listing
-                    </label>
-                  </span>
-                </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Send Request">
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div id="chat-window">
+        <div class="chat-header">MarsMeta Tech Assistant</div>
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input" placeholder="Type your question...">
+        <button onclick="sendMessage()">Send</button>
     </div>
-  </div>
-  <ul class="outer-nav">
-    <li><a href="#" style="text-decoration: none; color: white;">Home</a></li>
-    <li><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
-    <li><a href="about.html" style="color: white; text-decoration: none;">About </a></li>
-    <li>Contact</li>
-    <li>Contact Us</li>
-  </ul>
-</div>
+    <div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:#714B67;z-index:9999;transition:width 0.3s"></div>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MarsMeta Tech</a>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+            <a href="index.html"><strong>Apps</strong></a>
+            <a href="Industries.html">Industries</a>
+            <a href="Community.html">Community</a>
+            <a href="Pricing.html">Pricing</a>
+            <a href="Contact.html">Contact</a>
+            <a href="#">Sign in</a>
+            <a href="startnow.html" class="try-free-btn" style="color: white;">Try it free</a>
+            
+        </div>
+    </nav>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+    <div class="mobile-nav" >
+        <button class="close-menu">✕</button>
+        <div class="mobile-nav-links">
+            <strong >
+            <a href="index.html">Apps</a></strong>
+            <strong > <a href="Industries.html">Industries</a></strong>
+                <strong >  <a href="Community.html">Community</a></strong>
+                    <strong > <a href="Pricing.html">Pricing</a></strong>
+                        <strong > <a href="Contact.html">Contact</a></strong>
+                            <strong >  <a href="#">Sign in</a></strong>
+                            <strong><a href="startnow.html" class="try-free-btn" style="color: white;" >Try it free</a></strong>
+            
+           
+        </div>
+    </div>
+<section class="ssss"></section>
+    <section class="hero container no-select title ">
+        
+            <h1 style="font-family: 'Caveat', cursive;">All your business on <span class="x_wd_yellow_highlight_bold_05" style="font-family: 'Caveat', cursive;">one platform.🚀</span></h1>
+            <h2 style="font-family: 'Caveat', cursive;">✨ Simple, efficient, yet affordable! ✨</h2>
+            <div class="hero-buttons">
+                <a href="startnow.html"> <button class="try-free-btn"><strong>🚀 Start now - It's free</strong></button></a>
+                <a href="https://meetings-na2.hubspot.com/mars-meta" target="_blank">
+                    <button class="try-free-btn" style="background-color: #e8a000;">
+                      <strong>📅 Book a Free Consultation</strong>
+                    </button>
+                  </a>
+            </div>
+    </section>
+    <div class="container1">
+        <img src="image/k1.png" alt="Centered Image" style="height: 30%; width: 20%;">
+    </div>
+    <section class="hero">
+    <div class="business-show">
+       
+        <span>Virtual Tech Conference: Online Event</span>
+        <span>April 12, 2025</span>
+        <a href="#" style="color: #00A09D; text-decoration: none;">Register →</a>
+    </div>
+</section>
+   
+    <div class="apps-grid">
+        <!-- First row -->
+         
+        <div class="app-card">
+            <img src="image/website.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong>Website</strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/card1.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> NFC-Digital Card</strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/online-shopping.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Listing </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/Catalogue.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Catalogue</strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/digitalmarketing.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Marketing </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/accounting.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong>Accounting Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/crm.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong>CRM Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/erp.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> ERP Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/res.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Resturant Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/school.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong>School Software</strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/whats.jpg" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Whatsapp Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/help-desk.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> Support Ticketing Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/lms.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> LMS Software </strong></div>
+        </div>
+        <div class="app-card">
+            <img src="image/payment.png" alt="Accounting" class="app-icon">
+            <div class="app-name"><strong> POS Software </strong></div>
+        </div>
+        <!-- Add more app cards as needed -->
+    </div>
+   
+    <div class="footer-text">
+        <span><strong>A vast collection of business apps at your disposal.</strong> 
+        Got something to improve? There is an app for that.
+        No complexity, no cost, just a one-click install.</span>
+    </div>
+    
+    
+
+    <section class="hero">
+        <div class="quote-card">
+          
+            <div>
+                <p class="quote-text">If you simplify everything, you can do anything!</p>
+                <p class="quote-author">- Bill McDermott, former CEO of SAP</p>
+            </div>
+        </div>
+        <section class="sss"></section>
+        <img src="company/ready.png" alt="Ready to grow" style="width: 100%; height: 100%; padding: 20px;">
+
+        <div class="container " style="font-family: 'Caveat', cursive;">
+            <h1 class="title no-select" style="font-family: 'Caveat', cursive;">
+                Unleash 
+                <br>
+                your <span class="growth-text" style="font-family: 'Caveat', cursive;">growth potential</span>
+            </h1>
+            <a href="https://meetings-na2.hubspot.com/mars-meta" target="_blank">
+            <button class="btn no-select">📅 Book a Free Consultation</button>
+            </a>
+            <div class="info">
+                <div class="arrow">↑</div>
+                No credit card required
+                <br>
+                Instant access
+            </div>
+        </div>
+    
+    </section> 
+
+
+
+    <footer class="footer" style="text-align: left;">
+        <div class="footer-container">
+            <div>
+                <h3>About us</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.marsmetatech.com">Our company</a></li>
+                    <li><a href="Community.html">Brand Assets</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Customers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">MarsMeta Hosting</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Upgrade</a></li>
+                    <li><a href="#">Custom Developments</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Find an Accountant</a></li>
+                    <li><a href="#">Find a Partner</a></li>
+                    <li><a href="#">Become a Partner</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Open Source</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Runbot</a></li>
+                    <li><a href="#">Translations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Community</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </div>
+            
+
+            
+
+            
+
+            <div class="footer-description">
+                <p style="margin-top: 20px;">
+                    MarsMeta Tech is a leading provider of cutting-edge tech services, offering solutions in software development, cloud computing, cybersecurity, AI integration, IT consulting, and more. We empower businesses with innovative, scalable, and secure technology to drive growth and efficiency.
+                </p>
+                <p style="margin-top: 10px;">
+                    MarsMeta Tech unique value proposition is to be at the same time very easy to use and fully integrated.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61572315665008"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/marsmeta-tech-967433336/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/marsmeta_tech/"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+91818890434"><i class="fas fa-phone"></i></a>
+                    <a href="https://wa.me/918188890434"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>Website made with <a href="https://www.marsmetatech.com" style="text-decoration: none;"><strong style="color: white;">MarsMeta Tech</strong></a></div>
+        </div>
+    </footer>
+    <script>
+        // Optimized sparkle animation for mobile
+        function createSparkle() {
+            // Reduce sparkle frequency on mobile
+            if (window.innerWidth < 768 && Math.random() > 0.5) return;
+            
+            const title = document.querySelector('.title');
+            const sparkle = document.createElement('span');
+            sparkle.textContent = '✦';
+            sparkle.className = 'sparkles no-select';
+            
+            // Adjusted positioning for mobile
+            const bounds = title.getBoundingClientRect();
+            const top = (Math.random() * bounds.height) - bounds.height/2;
+            const left = (Math.random() * bounds.width) - bounds.width/2;
+            
+            sparkle.style.position = 'absolute';
+            sparkle.style.top = `${top}px`;
+            sparkle.style.left = `${left}px`;
+            sparkle.style.animation = 'sparkle 1s ease forwards';
+            
+            title.appendChild(sparkle);
+            
+            // Clean up
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+
+        // Reduced sparkle interval for better performance on mobile
+        const sparkleInterval = window.innerWidth < 768 ? 1000 : 500;
+        setInterval(createSparkle, sparkleInterval);
+
+        // Touch event handling
+        const button = document.querySelector('.btn');
+        
+        // Handle both click and touch events
+        button.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            createSparkle();
+            createSparkle();
+        }, { passive: false });
+
+        
+
+        // Disable double-tap zoom
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+    <script>
+        // Language selector functionality
+        document.querySelector('.language-selector').addEventListener('click', function() {
+            // Add your language switching logic here
+            console.log('Language selector clicked');
+        });
+
+        // Social media link hover effects
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover effects to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.opacity = '0.9';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.opacity = '1';
+            });
+        });
+    </script>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.style.display = 'block';
+            setTimeout(() => {
+                mobileNav.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            setTimeout(() => {
+                mobileNav.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = 'auto';
+        });
+
+        // Handle Android back button
+        window.addEventListener('popstate', () => {
+            if (mobileNav.classList.contains('active')) {
+                closeMenuBtn.click();
+                history.pushState(null, '');
+            }
+        });
+
+        // Add touch feedback
+        const buttons = document.querySelectorAll('button, .app-card');
+        buttons.forEach(button => {
+            button.addEventListener('touchstart', () => {
+                button.style.opacity = '0.7';
+            });
+            button.addEventListener('touchend', () => {
+                button.style.opacity = '1';
+            });
+        });
+
+       
+
+        // Add fastclick to eliminate 300ms delay
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.7.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/10.7.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.7.0/firebase-functions-compat.js"></script>
+    <script defer src="chat.js"></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/241929549.js"></script>
+  <!-- End of HubSpot Embed Code -->
+   
 </body>
 </html>
